@@ -21,3 +21,6 @@ labels it "register",  sends info to register.php, "post" specifies it as a web 
 
     <p>Have an account already? <a href = "login.php">Login here</a></p> <!-- brings user back to login page -->
 </form>
+
+</body>
+</html> <!-- closes the html and body header made in main.inc.php just so it doesn't break or cause an error-->

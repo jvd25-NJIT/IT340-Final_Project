@@ -19,3 +19,6 @@ labels it "login",  sends info to login.php, "post" specifies it as a web reques
 
     <p>Don't have an account? <a href = "register.php">Register here</a></p> <!-- brings user to register page -->
 </form>
+
+</body>
+</html> <!-- closes the html and body header made in main.inc.php just so it doesn't break or cause an error-->

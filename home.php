@@ -11,3 +11,6 @@
     <li>IT 331</li>
 </ul>
 
+</body>
+</html> <!-- closes the html and body header made in main.inc.php just so it doesn't break or cause an error-->
+

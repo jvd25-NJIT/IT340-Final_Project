@@ -12,9 +12,9 @@
         <h1>Vocality Note Manager</h1>
 
         <nav> <!-- makes a navigation menu for all pages-->
-            <a href = "home.php">Home</a>
-            <a href = "login.php">Login</a>
             <a href = "register.php">Register</a>
+            <a href = "login.php">Login</a>
+            <a href = "home.php">Home</a>
         </nav>
         <br>
 
