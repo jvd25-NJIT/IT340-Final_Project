@@ -1,0 +1,42 @@
+/* 
+Color Scheme I Want to Use:
+- #C9E4CA: lightest
+- #87BBA2
+- #55828B
+- #3B6064
+- #364958: darkest
+*/
+
+body {
+    background-color: #364958;
+    font-family: Arial, Helvetica, sans-serif;
+} /*
+    - background color of the page = light green ish 
+    - changes font style
+*/
+
+h1, h2, h3 {
+    color: #C9E4CA;
+}
+
+p {
+    color: #87BBA2;
+}
+
+form[name = "login"] label,
+form[name = "register"] label{
+    color: #C9E4CA;
+}
+
+form input[type = "text"],
+form input[type = "password"] {
+    color: #3B6064;
+}
+
+nav a, a{
+    color: #55828B;
+}
+
+nav a:hover, a:hover{
+    color: #C9E4CA;
+}
