@@ -11,32 +11,52 @@ body {
     background-color: #364958;
     font-family: Arial, Helvetica, sans-serif;
 } /*
-    - background color of the page = light green ish 
+    - background color of the page = dark green ish 
     - changes font style
 */
 
 h1, h2, h3 {
     color: #C9E4CA;
-}
+} /*
+    - header color = light green
+*/
 
 p {
     color: #87BBA2;
-}
+} /*
+    - paragraph color = light green
+*/
 
 form[name = "login"] label,
 form[name = "register"] label{
     color: #C9E4CA;
-}
+} /*
+    - labels for the input in login and register page = light green
+*/
 
 form input[type = "text"],
 form input[type = "password"] {
     color: #3B6064;
-}
+} /*
+    - input text in login and register page = dark green
+*/
 
 nav a, a{
     color: #55828B;
-}
+} /*
+    - links = mid green
+*/
 
 nav a:hover, a:hover{
     color: #C9E4CA;
 }
+/*
+    - hover over links = light green
+*/
+
+ul{
+    color: #55828B;
+}
+/*
+    - lists = mid green
+*/
