@@ -5,7 +5,7 @@
 <form name = "login" action = "validate.inc.php" method = "post"> <!-- uses form tag to create input fields, 
 labels it "login",  sends info to validate.inc.php, "post" specifies it as a web request -->
     <label>Email: </label>
-    <input type="text" name="email_address" size="20" required> <!-- specifies input as text, names it
+    <input type="email" name="email_address" size="20" required> <!-- specifies input as text, names it
     "email_address", and gives it parameters -->
 
     <label>Password: </label>
