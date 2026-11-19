@@ -2,8 +2,8 @@
 
 <h2>Login to Vocality</h2> <!-- prints a message that prompts users to login to their account -->
 
-<form name = "login" action = "login.php" method = "post"> <!-- uses form tag to create input fields, 
-labels it "login",  sends info to login.php, "post" specifies it as a web request -->
+<form name = "login" action = "validate.inc.php" method = "post"> <!-- uses form tag to create input fields, 
+labels it "login",  sends info to validate.inc.php, "post" specifies it as a web request -->
     <label>Email: </label>
     <input type="text" name="email_address" size="20" required> <!-- specifies input as text, names it
     "email_address", and gives it parameters -->
@@ -12,7 +12,8 @@ labels it "login",  sends info to login.php, "post" specifies it as a web reques
     <input type="password" name="password" size="20" required> <!-- same as email section but asking for 
     password and doesn't show in plain text-->
 
-    <input type = "submit" value = "Login"> <!-- makes a submit button -->
+    <input type = "submit" name = "login" value = "Login"> <!-- makes a submit button and name "login" 
+    to be referred in validate.inc.php-->
 
     <br>
     <br>
