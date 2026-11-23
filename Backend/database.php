@@ -2,7 +2,7 @@
 
 /* setting up login credentials for database: who to ping, what database to access, which user in the 
 database to connect to + password */
-$host = '127.0.0.1';
+$host = '192.168.112.30';
 $dbname = 'vocality';
 $username = 'jester_admin';
 $password = 'V0c@l1ty!J3st3r#99';

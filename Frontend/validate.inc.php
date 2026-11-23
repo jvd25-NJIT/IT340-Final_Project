@@ -25,10 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'password'=> $password
     );
 
-    /* specifiying the location of the backend where the data is to be sent, localhost for now since I'm 
-    testing everything on my host machine first. Will change it to static private IP of backend VM later*/
-    $backend_url = "http://localhost/IT340-Final_Project/Backend/auth_api.php";
-
+    /* specifiying the location of the backend where the data is to be sent: static IP of Backend (VM2) 
+    in the host-only VLAN*/
+    $backend_url = "http://192.168.112.20/auth_api.php";
+    
     /* starts up the curl tool, specifies the backend url that is to be connected, and saves the
     active connection in the variable*/
     $curl = curl_init($backend_url);

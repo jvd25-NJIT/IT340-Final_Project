@@ -25,6 +25,6 @@ CREATE USER IF NOT EXISTS 'jester_admin'@'192.168.112.%' IDENTIFIED BY 'V0c@l1ty
 (for VM, testing host as of now)
 */
 /* making a user to enforce least-priveledge. mySQL creates a root account for the database by default*/
-CREATE USER IF NOT EXISTS 'jester_admin'@'127.0.0.1' IDENTIFIED BY 'V0c@l1ty!J3st3r#99';
+CREATE USER IF NOT EXISTS 'jester_admin'@'192.168.112.20' IDENTIFIED BY 'V0c@l1ty!J3st3r#99';
 
-GRANT SELECT, INSERT, UPDATE, DELETE ON vocality.* TO 'jester_admin'@'127.0.0.1'
+GRANT SELECT, INSERT, UPDATE, DELETE ON vocality.* TO 'jester_admin'@'192.168.112.20';

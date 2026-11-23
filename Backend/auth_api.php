@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
 
     /* Option 1: The user clicked "Register" button from Register page*/
-    if ($action = "Register"){
+    if ($action === "register"){
 
         /* I need this so that the database stores hashed passwords and not plain text passwords*/
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     /* Option 2: The user clicked "Login" instead*/
-    elseif ($action = "Login"){
+    elseif ($action === "login"){
 
         /* Like register option, it premakes a fill in the blank query to stop SQL injections*/
         $stmt = $pdo->prepare("SELECT password_hash FROM users WHERE email = ?");
