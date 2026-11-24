@@ -40,7 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo("Error: An account with that email exists already.");
             }
             else{
-                echo "Database error: " . $e->getMessage(); 
+                /* makes error log and shows user message*/
+                error_log("Register Database error: " . $e->getMessage()); 
+
+                echo "Sorry, something went wrong when trying to register your account. Please try again later.";
             }
 
 
@@ -51,15 +54,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     /* Option 2: The user clicked "Login" instead*/
     elseif ($action === "login"){
 
-        /* Like register option, it premakes a fill in the blank query to stop SQL injections*/
-        $stmt = $pdo->prepare("SELECT password_hash FROM users WHERE email = ?");
-        $stmt->execute([$email]);
-
-        /* saves the whole row of data which the database found and turns up empty if user does not exist */
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
         /* if the user puts the wrong info, the program catches the error instead of crashing*/
         try {
+
+            /* Like register option, it premakes a fill in the blank query to stop SQL injections*/
+            $stmt = $pdo->prepare("SELECT password_hash FROM users WHERE email = ?");
+            $stmt->execute([$email]);
+
+            /* saves the whole row of data which the database found and turns up empty if user does not exist */
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             /* checks if the user row in the database exists and if the password matches 
             with password_verify*/
@@ -73,7 +76,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
 
         } catch (PDOException $e) {
-            echo "Database error: " . $e->getMessage(); 
+            /* makes error log and shows user message*/
+            error_log("Login Database error: " . $e->getMessage());
+
+            echo "Sorry, something went wrong when trying to login your account. Please try again later.";
         }
 
     }

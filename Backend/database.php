@@ -19,8 +19,10 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 } catch (PDOException $e){
-    /* ends the program and gives the error message */
-    die("Database Connection Failed: " . $e->getMessage());
+    /* gives the error message and logs it (through Apache logging directory in this case) */
+    error_log("Database Connection Failed: " . $e->getMessage());
+
+    die("Sorry, we are having technical difficulties right now. Please try again later.");
 }
 
 ?>

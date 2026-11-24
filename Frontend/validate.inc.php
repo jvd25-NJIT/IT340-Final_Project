@@ -64,8 +64,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     /* close the curl connection to free up memory*/
     curl_close($curl);
 
-    /* for now, this is show what auth_api.php responded with. will be replaced once I code auth_api.php*/
-    echo "Backend responded with: " . $response;
+    /* this if blobk checks if the user clicked login and if they put the right email and password*/
+    if ($action_type === 'login' && trim($response) === "Success: Login authenticated!"){
+
+        /* uses superglobal array for session so that the website remembers that the user is logged in */
+        $_SESSION['user'] = $email;
+
+        /* sends an HTTP redirect to go to the home page */
+        header("Location: home.php");
+
+        /* stops the remaining php script */
+        exit();
+
+    }
+    else{
+
+        /* prints everything else */
+        echo "<p>" . htmlspecialchars($response) . "</p>";
+
+        /* gives the user optional links to try registering or logging in again */
+        echo '<p><a href = "login.php">Try logging in again</a> | <a href = "register.php">Back to Register page</a></p>';
+
+    }
 }
 
 
